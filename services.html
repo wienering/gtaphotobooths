@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional photo booth rental services in Toronto and GTA. Wedding photo booths, corporate events, instant prints, digital sharing, and custom backdrops.">
+    <meta name="description" content="Professional photo booth rental services in Toronto and GTA. Instant prints, digital sharing, custom backdrops, props, and on-site attendants for weddings, corporate events, and celebrations.">
     <title>Photo Booth Services | GTA Photo Booths</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,12 +85,21 @@
         },
         {
           "@type": "Service",
-          "@id": "https://www.gtaphotobooths.ca/#service",
+          "@id": "https://www.gtaphotobooths.ca/services#service",
           "name": "Photo Booth Rental Service",
           "provider": {"@id": "https://www.gtaphotobooths.ca/#organization"},
           "serviceType": "Photo booth rental",
           "description": "Open-air photo booths with attendant, instant prints, digital sharing, and custom templates for weddings, parties, and corporate events throughout the Greater Toronto Area.",
-          "areaServed": ["Toronto","Mississauga","Vaughan","Oakville","Richmond Hill","GTA"]
+          "areaServed": ["Toronto","Mississauga","Vaughan","Oakville","Richmond Hill","GTA"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "GTA Photo Booths Services",
+            "itemListElement": [
+              {"@type": "Offer", "name": "Professional Photo Booth Rental", "url": "https://www.gtaphotobooths.ca/services", "priceCurrency": "CAD", "price": 550, "availability": "https://schema.org/InStock", "itemOffered": {"@type": "Service", "name": "Photo Booth Rental"}},
+              {"@type": "Offer", "name": "Instant Photo Printing", "url": "https://www.gtaphotobooths.ca/services", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "itemOffered": {"@type": "Service", "name": "Instant Photo Printing"}},
+              {"@type": "Offer", "name": "Digital Photo Sharing", "url": "https://www.gtaphotobooths.ca/services", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "itemOffered": {"@type": "Service", "name": "Digital Photo Sharing"}}
+            ]
+          }
         }
       ]
     }
@@ -123,24 +132,24 @@
     <!-- Services Hero -->
     <section class="hero" style="min-height: 60vh; margin-top: 80px;">
         <div class="hero-background">
-            <img src="images/IMG_7214_20251219_205436_3600.jpg" alt="Photo Booth Services" class="hero-image">
+            <img src="images/IMG_7210_20251219_205215_3600.jpg" alt="Photo Booth Services" class="hero-image">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
             <h1 class="hero-title">Our Photo Booth Services</h1>
-            <p class="hero-subtitle">Professional photo booth solutions for every event type</p>
+            <p class="hero-subtitle">Complete photo booth solutions for every event type</p>
         </div>
     </section>
 
-    <!-- Main Services Section -->
+    <!-- Services Section -->
     <section class="services">
         <div class="container">
             <h2 class="section-title">What We Offer</h2>
-            <p class="section-description">Comprehensive photo booth rental services tailored to your event needs</p>
+            <p class="section-description">Professional photo booth services tailored to your event needs</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="images/IMG_7210_20251219_205215_3600.jpg" alt="Professional photo booth equipment">
+                        <img src="images/IMG_7210_20251219_205215_3600.jpg" alt="Professional photo booth setup">
                     </div>
                     <h3>Professional Equipment</h3>
                     <p>High-quality DSLR cameras and studio lighting ensure crisp, clear photos every time. Our professional-grade equipment delivers results that match what you'd expect from a professional photography studio.</p>
@@ -168,19 +177,19 @@
                 </div>
                 <div class="service-card">
                     <h3>Custom Backdrops</h3>
-                    <p>Choose from our collection of luxury backdrops or customize one to match your event theme. Premium and deluxe packages include custom backdrop options to perfectly complement your event's aesthetic.</p>
+                    <p>Choose from our collection of luxury backdrops or customize one to match your event theme, colors, or branding. Premium and deluxe packages include custom backdrop options.</p>
                 </div>
                 <div class="service-card">
                     <h3>Props Collection</h3>
-                    <p>Fun props and accessories to add personality and humor to every photo. We bring a variety of props including hats, glasses, signs, and themed accessories to make your photos memorable.</p>
+                    <p>Fun props and accessories to add personality and humor to every photo. We bring a variety of props including hats, glasses, signs, and themed accessories.</p>
                 </div>
                 <div class="service-card">
                     <h3>Custom Templates</h3>
-                    <p>Personalized photo templates with your event details, names, or branding. Add your wedding date, company logo, or custom messaging to make each photo unique to your event.</p>
+                    <p>Personalized photo templates with your event details, names, or branding. Make each photo unique to your special occasion with custom-designed templates.</p>
                 </div>
                 <div class="service-card">
                     <h3>Online Gallery</h3>
-                    <p>Premium and deluxe packages include access to an online gallery where all event photos are stored. Guests can easily access and download all photos from your event in one convenient location.</p>
+                    <p>Premium and deluxe packages include access to an online gallery where all event photos are stored for easy access and sharing. Guests can view and download all photos from your event.</p>
                 </div>
             </div>
         </div>
@@ -192,54 +201,54 @@
             <h2 class="section-title">Services for Every Event Type</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Wedding Photo Booths</h3>
-                    <p>Make your wedding day even more special with a professional photo booth. Capture candid moments with family and friends, create lasting memories, and provide guests with instant keepsakes. Perfect for weddings throughout Toronto, Mississauga, Vaughan, Oakville, and Richmond Hill.</p>
+                    <h3>Weddings</h3>
+                    <p>Make your wedding day unforgettable with our professional photo booth services. Perfect for capturing candid moments with family and friends, creating guest books, and providing entertainment throughout your celebration.</p>
                 </div>
                 <div class="service-card">
                     <h3>Corporate Events</h3>
-                    <p>Enhance your corporate gatherings, product launches, team building events, and company parties with professional photo booth services. Custom branding options available to align with your company's image and marketing goals.</p>
+                    <p>Enhance your corporate gatherings, conferences, and company parties with branded photo booth experiences. Custom templates with your company logo and branding options available.</p>
                 </div>
                 <div class="service-card">
                     <h3>Birthday Parties</h3>
-                    <p>Celebrate birthdays in style with our fun and interactive photo booth experience. Perfect for milestone birthdays, kids' parties, and adult celebrations. Props and backdrops can be customized to match your party theme.</p>
+                    <p>Add fun and excitement to birthday celebrations of all ages. Our photo booths create lasting memories and provide entertainment that guests of all ages will love.</p>
                 </div>
                 <div class="service-card">
                     <h3>Anniversaries</h3>
-                    <p>Celebrate your special milestone with a photo booth that captures the joy and love of your celebration. Create beautiful memories with family and friends that you'll treasure for years to come.</p>
+                    <p>Celebrate milestone anniversaries with a photo booth that captures the joy and love of your special day. Custom templates available to commemorate your anniversary.</p>
                 </div>
                 <div class="service-card">
                     <h3>Graduations</h3>
-                    <p>Commemorate this important achievement with a photo booth that captures the excitement and pride of graduation day. Perfect for high school and university graduations throughout the GTA.</p>
+                    <p>Celebrate academic achievements with a photo booth that captures the excitement and pride of graduation day. Perfect for school events and graduation parties.</p>
                 </div>
                 <div class="service-card">
                     <h3>Holiday Parties</h3>
-                    <p>Add fun and entertainment to your holiday celebrations with our themed photo booth services. Whether it's Christmas, New Year's Eve, or any holiday gathering, we help make it memorable.</p>
+                    <p>Add festive fun to your holiday celebrations with themed props and backdrops. Perfect for Christmas parties, New Year's Eve events, and other seasonal celebrations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Add-On Services Section -->
+    <!-- Add-Ons Section -->
     <section class="intro" style="background: var(--light);">
         <div class="container">
             <h2 class="section-title">Add-On Services</h2>
-            <p class="section-description">Enhance your photo booth experience with our optional add-ons</p>
-            <div class="services-grid" style="margin-top: 2rem;">
+            <p class="section-description">Enhance your photo booth experience with these optional add-ons</p>
+            <div class="services-grid">
                 <div class="service-card">
                     <h3>Unlimited Prints</h3>
-                    <p>Upgrade to unlimited prints so guests can take home as many photos as they want. Available at $60 per hour of rental time, ensuring everyone gets their favorite memories.</p>
+                    <p>Upgrade to unlimited prints for $60 per hour of rental time. Guests can take home as many physical copies as they want.</p>
                 </div>
                 <div class="service-card">
-                    <h3>Glam Booth Effect</h3>
-                    <p>Add a touch of glamour with our glam booth add-on. Provides black and white Kardashian-style images for $75, perfect for adding a sophisticated touch to your event photos.</p>
+                    <h3>Glam Booth</h3>
+                    <p>Add black and white Kardashian-style glam effects to your photos for $75. Perfect for adding a touch of elegance and style to your event photos.</p>
                 </div>
                 <div class="service-card">
                     <h3>Extended Waiting Time</h3>
-                    <p>Need the booth set up before your event begins or kept after it ends? Add waiting time at $50 per hour to ensure the photo booth is ready when you need it.</p>
+                    <p>Need the booth set up before your event begins or kept after it ends? Add waiting time at $50 per hour.</p>
                 </div>
                 <div class="service-card">
-                    <h3>AI Background Removal</h3>
-                    <p>Available with deluxe packages, AI background removal allows you to replace backgrounds in photos, creating unique and creative images that stand out.</p>
+                    <h3>Custom Branding</h3>
+                    <p>Fully customized photo templates with your logo, event details, or branding. Perfect for corporate events and branded experiences.</p>
                 </div>
             </div>
         </div>
@@ -249,8 +258,8 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Book Your Photo Booth Service?</h2>
-                <p>Get an instant quote and let's make your event unforgettable</p>
+                <h2>Ready to Book Your Photo Booth?</h2>
+                <p>Get an instant quote for your event and let's make it unforgettable</p>
                 <div class="cta-buttons">
                     <a href="/quote.html" class="btn btn-large">Get a Quote</a>
                     <a href="tel:+16473785332" class="btn btn-outline btn-large">Call: 647-378-5332</a>
