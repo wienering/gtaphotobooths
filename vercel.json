@@ -24,6 +24,42 @@
     {
       "source": "/products",
       "destination": "/products.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/pricing.html"
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/quote",
+      "destination": "/quote.html"
+    },
+    {
+      "source": "/toronto",
+      "destination": "/toronto.html"
+    },
+    {
+      "source": "/mississauga",
+      "destination": "/mississauga.html"
+    },
+    {
+      "source": "/vaughan",
+      "destination": "/vaughan.html"
+    },
+    {
+      "source": "/oakville",
+      "destination": "/oakville.html"
+    },
+    {
+      "source": "/richmond-hill",
+      "destination": "/richmond-hill.html"
     }
   ]
 }
