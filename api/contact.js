@@ -61,12 +61,12 @@ export default async function handler(req, res) {
             background-color: #ffffff;
           }
           .email-header {
-            border-bottom: 3px solid #4d0d6d;
+            border-bottom: 3px solid #0d6d5a;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
           }
           .email-header h2 {
-            color: #4d0d6d;
+            color: #0d6d5a;
             font-size: 1.75rem;
             margin: 0;
             font-weight: 600;
@@ -83,7 +83,7 @@ export default async function handler(req, res) {
             border-bottom: none;
           }
           .field-label {
-            color: #4d0d6d;
+            color: #0d6d5a;
             font-weight: 600;
             font-size: 0.875rem;
             text-transform: uppercase;
