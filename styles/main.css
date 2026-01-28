@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #0d6d5a;
-    --primary-dark: #0a523a;
+    --primary-color: #0d8d9a;
+    --primary-dark: #0a6d7a;
     --secondary-color: #5ab5d5;
     --dark: #2c3e50;
     --light: #ecf0f1;
@@ -150,7 +150,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(13, 109, 90, 0.65);
+    background: rgba(13, 141, 154, 0.65);
 }
 
 .hero-content {
