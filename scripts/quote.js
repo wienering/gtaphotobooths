@@ -76,13 +76,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Send contact info to API (don't block on error, just log it)
             try {
-                await fetch('/api/quote-contact', {
+                const response = await fetch('/api/quote-contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(quoteData.contact),
                 });
+                
+                // Check if response is OK and is JSON
+                if (!response.ok) {
+                    const contentType = response.headers.get('content-type');
+                    if (contentType && contentType.includes('application/json')) {
+                        const errorData = await response.json();
+                        console.error('Error sending contact info:', errorData);
+                    } else {
+                        const errorText = await response.text();
+                        console.error('Error sending contact info:', errorText);
+                    }
+                }
             } catch (error) {
                 // Silently fail - don't interrupt user flow
                 console.error('Error sending contact info:', error);
@@ -356,7 +368,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     body: JSON.stringify(quotePayload),
                 });
 
-                const result = await response.json();
+                // Check content type before parsing JSON
+                const contentType = response.headers.get('content-type');
+                let result;
+                
+                if (contentType && contentType.includes('application/json')) {
+                    result = await response.json();
+                } else {
+                    // If not JSON, get text response
+                    const errorText = await response.text();
+                    throw new Error(errorText || 'Server returned an invalid response');
+                }
 
                 if (response.ok) {
                     // Hide loading
@@ -372,11 +394,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         successMessage.classList.add('active');
                     }
                 } else {
-                    throw new Error(result.error || 'Failed to send quote');
+                    throw new Error(result.error || result.details || 'Failed to send quote');
                 }
             } catch (error) {
                 console.error('Error sending quote:', error);
-                alert(`Sorry, there was an error sending your quote: ${error.message}\n\nPlease try again or call us at 647-378-5332`);
+                const errorMessage = error.message || 'An unexpected error occurred';
+                alert(`Sorry, there was an error sending your quote: ${errorMessage}\n\nPlease try again or call us at 647-378-5332`);
                 
                 // Hide loading
                 if (loadingOverlay) {
