@@ -1,0 +1,24 @@
+{
+  "name": "gtaphotobooths-website",
+  "version": "1.0.0",
+  "description": "GTA Photo Booths Website",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "photo-booth",
+    "rental",
+    "toronto",
+    "gta"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "resend": "^4.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
