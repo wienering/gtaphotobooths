@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo Booth Rental Prices and Packages. Affordable photo booth rentals starting from $550. Get a quote for your event today!">
+    <title>Photo Booth Rental Prices | GTA Photo Booths</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" class="yoast-schema-graph">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.gtaphotobooths.ca/pricing.html",
+          "url": "https://www.gtaphotobooths.ca/pricing.html",
+          "name": "Photo Booth Rental Prices | GTA Photo Booths",
+          "isPartOf": {"@id": "https://www.gtaphotobooths.ca/#website"},
+          "about": {"@id": "https://www.gtaphotobooths.ca/#organization"},
+          "breadcrumb": {"@id": "https://www.gtaphotobooths.ca/pricing.html#breadcrumb"},
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.gtaphotobooths.ca/pricing.html#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gtaphotobooths.ca/"},
+            {"@type": "ListItem", "position": 2, "name": "Pricing"}
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.gtaphotobooths.ca/#website",
+          "url": "https://www.gtaphotobooths.ca/",
+          "name": "GTA Photo Booths",
+          "publisher": {"@id": "https://www.gtaphotobooths.ca/#organization"},
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.gtaphotobooths.ca/#organization",
+          "name": "GTA Photo Booths",
+          "url": "https://www.gtaphotobooths.ca/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.gtaphotobooths.ca/logo.png"
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness","EntertainmentBusiness","ProfessionalService"],
+          "@id": "https://www.gtaphotobooths.ca/#localbusiness",
+          "name": "GTA Photo Booths",
+          "url": "https://www.gtaphotobooths.ca/",
+          "telephone": "+16473785332",
+          "email": "hello@gtaphotobooths.ca",
+          "priceRange": "$550-$1450+",
+          "areaServed": [
+            "Toronto","Mississauga","Vaughan","Oakville","Richmond Hill",
+            "Brampton","Markham","Etobicoke","North York","GTA"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "https://schema.org/Monday","https://schema.org/Tuesday","https://schema.org/Wednesday",
+                "https://schema.org/Thursday","https://schema.org/Friday","https://schema.org/Saturday","https://schema.org/Sunday"
+              ],
+              "opens": "07:00",
+              "closes": "23:00"
+            }
+          ],
+          "parentOrganization": {"@id": "https://www.gtaphotobooths.ca/#organization"}
+        },
+        {
+          "@type": "Service",
+          "@id": "https://www.gtaphotobooths.ca/#service",
+          "name": "Photo Booth Rental Service",
+          "provider": {"@id": "https://www.gtaphotobooths.ca/#organization"},
+          "serviceType": "Photo booth rental",
+          "description": "Open-air photo booths with attendant, instant prints, digital sharing, and custom templates for weddings, parties, and corporate events.",
+          "areaServed": ["Toronto","Mississauga","Vaughan","Oakville","Richmond Hill","GTA"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "GTA Photo Booths Packages",
+            "itemListElement": [
+              {"@type": "Offer", "name": "Essential Package", "url": "https://www.gtaphotobooths.ca/pricing.html", "priceCurrency": "CAD", "price": 550, "availability": "https://schema.org/InStock", "itemOffered": {"@type": "Service", "name": "2-Hour Photo Booth Rental"}},
+              {"@type": "Offer", "name": "Premium Package", "url": "https://www.gtaphotobooths.ca/pricing.html", "priceCurrency": "CAD", "price": 750, "availability": "https://schema.org/InStock", "itemOffered": {"@type": "Service", "name": "3-Hour Photo Booth Rental"}},
+              {"@type": "Offer", "name": "Deluxe Package", "url": "https://www.gtaphotobooths.ca/pricing.html", "priceCurrency": "CAD", "price": 1000, "availability": "https://schema.org/InStock", "itemOffered": {"@type": "Service", "name": "4-Hour Photo Booth Rental"}}
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        .pricing-hero {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .pricing-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .pricing-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .pricing-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 2px solid var(--light);
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            position: relative;
+        }
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .pricing-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .pricing-period {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .pricing-cta {
+            margin-top: 2rem;
+        }
+        .pricing-note {
+            text-align: center;
+            color: var(--text-light);
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <img src="logo.png" alt="GTA Photo Booths" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pricing.html" class="active">Pricing</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/quote.html" class="btn-primary">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Pricing Hero -->
+    <section class="pricing-hero">
+        <div class="container">
+            <h1>Photo Booth Rental Prices</h1>
+            <p>Affordable packages for every event size and budget</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-name">Essential</div>
+                        <div class="pricing-price">$550</div>
+                        <div class="pricing-period">per event</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>2-hour rental</li>
+                        <li>Professional photo booth</li>
+                        <li>Instant prints (2 copies)</li>
+                        <li>Digital copies via email</li>
+                        <li>On-site attendant</li>
+                        <li>Props included</li>
+                        <li>Luxury backdrop</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="/quote.html" class="btn" style="width: 100%;">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <div class="pricing-name">Premium</div>
+                        <div class="pricing-price">$750</div>
+                        <div class="pricing-period">per event</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>3-hour rental</li>
+                        <li>Professional photo booth</li>
+                        <li>Instant prints (2 copies)</li>
+                        <li>Digital copies via email/text</li>
+                        <li>On-site attendant</li>
+                        <li>Premium props collection</li>
+                        <li>Custom backdrop & branding*</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="/quote.html" class="btn" style="width: 100%;">Get Quote</a>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-name">Deluxe</div>
+                        <div class="pricing-price">$1,000</div>
+                        <div class="pricing-period">per event</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>4-hour rental</li>
+                        <li>Professional photo booth</li>
+                        <li>Instant prints (2 copies)</li>
+                        <li>Digital copies via email/text</li>
+                        <li>On-site attendant</li>
+                        <li>Deluxe props collection</li>
+                        <li>Custom backdrop & branding*</li>
+                        <li>Online gallery access</li>
+                        <li>AI background removal available</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <a href="/quote.html" class="btn" style="width: 100%;">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-light);">
+                    <strong>*</strong> Custom backdrop & branding available for an additional fee
+                </p>
+                <h3 style="margin-bottom: 1rem; color: var(--text-dark);">Extended Packages Available</h3>
+                <p style="font-size: 1.125rem; line-height: 1.8;">
+                    For longer events, we offer extended rental packages. The 5-hour package is available for $1,250, and the 6-hour package is $1,450. All packages can be customized to fit your specific needs. Additional hours, extra prints, custom backdrops, and special props can be added. Contact us for a personalized quote based on your event requirements.
+                </p>
+                <p style="margin-top: 1rem; font-weight: 600;">
+                    Price Range: $550 - $1,450+ depending on package and add-ons
+                </p>
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--text-dark);">Add-On Options</h3>
+                <p style="font-size: 1rem; line-height: 1.8; color: var(--text-light);">
+                    Enhance your photo booth experience with our add-on options. Unlimited prints are available at $60 per hour of rental time. The glam booth add-on provides black and white Kardashian-style images for $75. Waiting time can be added at $50 per hour if you need the booth set up before your event begins or kept after it ends.
+                </p>
+                <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                    <h4 style="margin-bottom: 1rem; color: var(--text-dark);">Important Information</h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li style="margin-bottom: 0.75rem;">✓ <strong>No travel fees</strong> - We do not charge travel fees. However, longer distances may be subject to a three-hour minimum rental time.</li>
+                        <li style="margin-bottom: 0.75rem;">✓ <strong>Venue accessibility</strong> - Venues with multiple flights of stairs and no elevator may be subject to additional fees.</li>
+                        <li style="margin-bottom: 0.75rem;">✓ <strong>Deposit</strong> - A $100 deposit is required to secure your event date.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What's Included in Every Package</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>High-Quality Equipment</h3>
+                    <p>Professional DSLR cameras and studio-quality lighting for crisp, clear photos every time.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Instant Prints</h3>
+                    <p>Get your photos printed on the spot with our professional-grade printers.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Digital Copies</h3>
+                    <p>All photos available digitally via email or text for easy sharing on social media.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Professional Attendant</h3>
+                    <p>Experienced on-site attendant to ensure everything runs smoothly throughout your event.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Book Your Photo Booth?</h2>
+                <p>Get in touch today for a free quote and let's make your event unforgettable!</p>
+                <div class="cta-buttons">
+                    <a href="/quote.html" class="btn btn-large">Get a Quote</a>
+                    <a href="tel:+16473785332" class="btn btn-outline btn-large">Call: 647-378-5332</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GTA Photo Booths</h3>
+                    <p>Premium Photo Booth Rentals in Toronto and GTA</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/quote.html">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>
+                        <a href="tel:+16473785332">647-378-5332</a><br>
+                        <a href="mailto:hello@gtaphotobooths.ca">hello@gtaphotobooths.ca</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>
+                        <a href="/toronto.html">Toronto</a> • 
+                        <a href="/mississauga.html">Mississauga</a> • 
+                        <a href="/vaughan.html">Vaughan</a> • 
+                        <a href="/oakville.html">Oakville</a> • 
+                        <a href="/richmond-hill.html">Richmond Hill</a> • GTA
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2026</span> GTA Photo Booths. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

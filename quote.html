@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get an instant photo booth quote for your event. Packages from $550. Professional photo booth rentals in Toronto and GTA.">
+    <title>Get Your Photo Booth Quote | GTA Photo Booths</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" class="yoast-schema-graph">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.gtaphotobooths.ca/quote.html",
+          "url": "https://www.gtaphotobooths.ca/quote.html",
+          "name": "Get Your Photo Booth Quote | GTA Photo Booths",
+          "isPartOf": {"@id": "https://www.gtaphotobooths.ca/#website"},
+          "about": {"@id": "https://www.gtaphotobooths.ca/#organization"},
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.gtaphotobooths.ca/#website",
+          "url": "https://www.gtaphotobooths.ca/",
+          "name": "GTA Photo Booths",
+          "publisher": {"@id": "https://www.gtaphotobooths.ca/#organization"},
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.gtaphotobooths.ca/#organization",
+          "name": "GTA Photo Booths",
+          "url": "https://www.gtaphotobooths.ca/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.gtaphotobooths.ca/logo.png"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        .quote-hero {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 6rem 0 3rem;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .quote-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .quote-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 1rem;
+        }
+        .quote-hero .trust-signal {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+        }
+        
+        .quote-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        
+        .quote-steps {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .step-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: var(--transition);
+        }
+        .step-indicator.active .step-number {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        .step-indicator.completed .step-number {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+        .step-label {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .step-label {
+                display: block;
+                font-weight: 500;
+                color: var(--text-light);
+            }
+            .step-indicator.active .step-label {
+                color: var(--primary-color);
+                font-weight: 600;
+            }
+        }
+        
+        .quote-step {
+            display: none;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        .quote-step.active {
+            display: block;
+        }
+        .quote-step h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+        .quote-step p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--light);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .package-card {
+            background: var(--white);
+            border: 2px solid var(--light);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .package-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        .package-card.selected {
+            border-color: var(--primary-color);
+            background: rgba(77, 13, 109, 0.05);
+        }
+        .package-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .package-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .package-card .description {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        .addons-section {
+            margin-top: 3rem;
+        }
+        .addons-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        .addon-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        .addon-item label {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            flex: 1;
+        }
+        .addon-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .addon-item .addon-name {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .addon-item .addon-price {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        .addon-item.waiting-time {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .waiting-time-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+        }
+        .waiting-time-controls input[type="number"] {
+            width: 80px;
+            padding: 0.5rem;
+            border: 2px solid var(--light);
+            border-radius: 5px;
+        }
+        
+        .quote-summary {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        .quote-summary h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+        .summary-item.total {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid var(--primary-color);
+        }
+        .summary-label {
+            color: var(--text-light);
+        }
+        .summary-value {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .summary-item.total .summary-value {
+            color: var(--primary-color);
+            font-size: 1.75rem;
+        }
+        
+        .quote-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .quote-actions .btn {
+            flex: 1;
+        }
+        .quote-actions .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .quote-actions .btn-outline:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+        .loading-overlay.active {
+            display: flex;
+        }
+        .loading-content {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid var(--light);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .success-message {
+            display: none;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .success-message.active {
+            display: block;
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2.5rem;
+        }
+        .success-message h2 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        .success-message p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+        
+        .legal-disclaimer {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .quote-hero h1 {
+                font-size: 2rem;
+            }
+            .quote-step {
+                padding: 1.5rem;
+            }
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+            .quote-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <img src="logo.png" alt="GTA Photo Booths" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/quote.html" class="active">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="quote-hero">
+        <div class="container">
+            <h1>GET YOUR PHOTO BOOTH QUOTE</h1>
+            <p>Instant Pricing For GTA Events • Packages from $550</p>
+            <div class="trust-signal">Professional Service • Instant Quotes • Transparent Pricing</div>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section class="intro">
+        <div class="container">
+            <div class="quote-container">
+                <!-- Step Indicators -->
+                <div class="quote-steps">
+                    <div class="step-indicator active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Contact Info</div>
+                    </div>
+                    <div class="step-indicator" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Package Selection</div>
+                    </div>
+                    <div class="step-indicator" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Quote Review</div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Contact Info -->
+                <div class="quote-step active" id="step1">
+                    <h2>Let's Get Started</h2>
+                    <p>Please provide your contact information and event details.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">Event Date *</label>
+                            <input type="date" id="eventDate" name="eventDate" required>
+                        </div>
+                        <div class="legal-disclaimer">
+                            By submitting this form, you agree to receive communications via email and SMS from GTA Photo Booths.
+                        </div>
+                        <div class="quote-actions">
+                            <button type="button" class="btn" disabled style="opacity: 0.5; cursor: not-allowed;">Back</button>
+                            <button type="submit" class="btn">Continue to Package Selection</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Step 2: Package Selection -->
+                <div class="quote-step" id="step2">
+                    <h2>Choose Your Package</h2>
+                    <p>Select your photo booth package and any add-ons you'd like.</p>
+                    
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-dark);">Base Packages</h3>
+                    <div class="packages-grid" id="packagesGrid">
+                        <div class="package-card" data-hours="2" data-price="550">
+                            <h3>2 Hours</h3>
+                            <div class="price">$550</div>
+                            <div class="description">Perfect for intimate gatherings</div>
+                        </div>
+                        <div class="package-card" data-hours="3" data-price="750">
+                            <h3>3 Hours</h3>
+                            <div class="price">$750</div>
+                            <div class="description">Great for most events</div>
+                        </div>
+                        <div class="package-card" data-hours="4" data-price="1000">
+                            <h3>4 Hours</h3>
+                            <div class="price">$1,000</div>
+                            <div class="description">Ideal for longer celebrations</div>
+                        </div>
+                        <div class="package-card" data-hours="5" data-price="1250">
+                            <h3>5 Hours</h3>
+                            <div class="price">$1,250</div>
+                            <div class="description">Extended party coverage</div>
+                        </div>
+                        <div class="package-card" data-hours="6" data-price="1450">
+                            <h3>6 Hours</h3>
+                            <div class="price">$1,450</div>
+                            <div class="description">All-day event coverage</div>
+                        </div>
+                    </div>
+
+                    <div class="addons-section">
+                        <h3>Add-ons</h3>
+                        <div class="addon-item">
+                            <label>
+                                <input type="checkbox" id="unlimitedPrints">
+                                <span class="addon-name">Unlimited Prints</span>
+                            </label>
+                            <span class="addon-price" id="unlimitedPrintsPriceDisplay">$120</span>
+                        </div>
+                        <div class="addon-item" style="flex-direction: column; align-items: flex-start;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                <label style="display: flex; align-items: center; gap: 1rem; cursor: pointer; flex: 1;">
+                                    <input type="checkbox" id="glamBooth" data-price="75">
+                                    <span class="addon-name">Glam Booth</span>
+                                </label>
+                                <span class="addon-price">$75</span>
+                            </div>
+                            <div style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem; margin-left: 2rem;">Black & White "Kardashian" style images</div>
+                        </div>
+                        <div class="addon-item waiting-time">
+                            <label>
+                                <input type="checkbox" id="waitingTime">
+                                <span class="addon-name">Waiting Time</span>
+                            </label>
+                            <div class="waiting-time-controls">
+                                <span>Hours:</span>
+                                <input type="number" id="waitingHours" min="0" max="4" value="0" disabled>
+                                <span class="addon-price" id="waitingTimePriceDisplay">$0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quote-summary" id="packageSummary">
+                        <h3>Quote Summary</h3>
+                        <div class="summary-item">
+                            <span class="summary-label">Base Package:</span>
+                            <span class="summary-value" id="basePackagePrice">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Unlimited Prints:</span>
+                            <span class="summary-value" id="unlimitedPrintsPrice">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Glam Booth:</span>
+                            <span class="summary-value" id="glamBoothPrice">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Waiting Time:</span>
+                            <span class="summary-value" id="waitingTimePrice">$0</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span class="summary-label">Total:</span>
+                            <span class="summary-value" id="totalPrice">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="quote-actions">
+                        <button type="button" class="btn btn-outline" id="backToStep1">Back</button>
+                        <button type="button" class="btn" id="reviewQuote" disabled>Review Quote</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Quote Review -->
+                <div class="quote-step" id="step3">
+                    <h2>Review Your Quote</h2>
+                    <p>Please review your quote details before we send it to you.</p>
+                    
+                    <div class="quote-summary">
+                        <h3>Client Information</h3>
+                        <div class="summary-item">
+                            <span class="summary-label"><strong>Name:</strong></span>
+                            <span class="summary-value" id="reviewName"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label"><strong>Email:</strong></span>
+                            <span class="summary-value" id="reviewEmail"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label"><strong>Phone:</strong></span>
+                            <span class="summary-value" id="reviewPhone"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label"><strong>Event Date:</strong></span>
+                            <span class="summary-value" id="reviewEventDate"></span>
+                        </div>
+                    </div>
+
+                    <div class="quote-summary">
+                        <h3>Package Details</h3>
+                        <div class="summary-item">
+                            <span class="summary-label">Base Package:</span>
+                            <span class="summary-value" id="reviewBasePackage"></span>
+                        </div>
+                        <div id="reviewAddons"></div>
+                        <div class="summary-item total">
+                            <span class="summary-label">Total Cost:</span>
+                            <span class="summary-value" id="reviewTotal">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="legal-disclaimer">
+                        By submitting this form, you agree to receive communications via email and SMS from GTA Photo Booths.
+                    </div>
+
+                    <div class="quote-actions">
+                        <button type="button" class="btn btn-outline" id="backToStep2">Back</button>
+                        <button type="button" class="btn" id="sendQuote">Send Quote</button>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">✓</div>
+                    <h2>Quote Sent Successfully!</h2>
+                    <p>Thanks for getting in touch. We've sent your quote to the email address you provided. Please check your inbox (or spam folder) for the details.</p>
+                    <div class="quote-actions">
+                        <button type="button" class="btn" id="createNewQuote">Create New Quote</button>
+                        <a href="/contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Generating your quote...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GTA Photo Booths</h3>
+                    <p>Premium Photo Booth Rentals in Toronto and GTA</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/quote.html">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>
+                        <a href="tel:+16473785332">647-378-5332</a><br>
+                        <a href="mailto:hello@gtaphotobooths.ca">hello@gtaphotobooths.ca</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>
+                        <a href="/toronto.html">Toronto</a> • 
+                        <a href="/mississauga.html">Mississauga</a> • 
+                        <a href="/vaughan.html">Vaughan</a> • 
+                        <a href="/oakville.html">Oakville</a> • 
+                        <a href="/richmond-hill.html">Richmond Hill</a> • GTA
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2026</span> GTA Photo Booths. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/quote.js"></script>
+</body>
+</html>
