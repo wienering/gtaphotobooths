@@ -8,6 +8,22 @@
     {
       "source": "/api/:path*",
       "destination": "/api/:path*"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html"
+    },
+    {
+      "source": "/news",
+      "destination": "/news.html"
+    },
+    {
+      "source": "/products",
+      "destination": "/products.html"
     }
   ]
 }

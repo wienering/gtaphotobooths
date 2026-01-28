@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest news, updates, and tips from GTA Photo Booths. Photo booth trends, event planning advice, and company updates.">
+    <title>News & Updates | GTA Photo Booths</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" class="yoast-schema-graph">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.gtaphotobooths.ca/news",
+          "url": "https://www.gtaphotobooths.ca/news",
+          "name": "News & Updates | GTA Photo Booths",
+          "isPartOf": {"@id": "https://www.gtaphotobooths.ca/#website"},
+          "about": {"@id": "https://www.gtaphotobooths.ca/#organization"},
+          "breadcrumb": {"@id": "https://www.gtaphotobooths.ca/news#breadcrumb"},
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.gtaphotobooths.ca/news#breadcrumb",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.gtaphotobooths.ca/"},
+            {"@type": "ListItem", "position": 2, "name": "News"}
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.gtaphotobooths.ca/#website",
+          "url": "https://www.gtaphotobooths.ca/",
+          "name": "GTA Photo Booths",
+          "publisher": {"@id": "https://www.gtaphotobooths.ca/#organization"},
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.gtaphotobooths.ca/#organization",
+          "name": "GTA Photo Booths",
+          "url": "https://www.gtaphotobooths.ca/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.gtaphotobooths.ca/logo.png"
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": ["LocalBusiness","EntertainmentBusiness","ProfessionalService"],
+          "@id": "https://www.gtaphotobooths.ca/#localbusiness",
+          "name": "GTA Photo Booths",
+          "url": "https://www.gtaphotobooths.ca/",
+          "telephone": "+16473785332",
+          "email": "hello@gtaphotobooths.ca",
+          "priceRange": "$550-$1450+",
+          "areaServed": [
+            "Toronto","Mississauga","Vaughan","Oakville","Richmond Hill",
+            "Brampton","Markham","Etobicoke","North York","Scarborough","Ajax","GTA"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "https://schema.org/Monday","https://schema.org/Tuesday","https://schema.org/Wednesday",
+                "https://schema.org/Thursday","https://schema.org/Friday","https://schema.org/Saturday","https://schema.org/Sunday"
+              ],
+              "opens": "07:00",
+              "closes": "23:00"
+            }
+          ],
+          "parentOrganization": {"@id": "https://www.gtaphotobooths.ca/#organization"}
+        }
+      ]
+    }
+    </script>
+    <style>
+        .news-hero {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .news-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .news-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+        .news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 20px;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .news-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .news-card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .news-card-content {
+            padding: 2rem;
+        }
+        .news-card-date {
+            color: var(--primary-color);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .news-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        .news-card-excerpt {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .news-card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .news-card-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <img src="logo.png" alt="GTA Photo Booths" class="logo-img">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/quote.html" class="btn-primary">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Hero -->
+    <section class="news-hero">
+        <div class="container">
+            <h1>News & Updates</h1>
+            <p>Stay informed about photo booth trends, event tips, and company updates</p>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="news-container">
+                <div class="news-grid">
+                    <div class="news-card">
+                        <img src="images/IMG_8508_20260110_200829_3600.jpg" alt="Photo booth trends" class="news-card-image">
+                        <div class="news-card-content">
+                            <div class="news-card-date">January 2026</div>
+                            <h3 class="news-card-title">Top Photo Booth Trends for 2026</h3>
+                            <p class="news-card-excerpt">
+                                Discover the latest trends in photo booth entertainment, from custom backdrops to AI-enhanced features. Learn what's popular for weddings, corporate events, and celebrations throughout the GTA.
+                            </p>
+                            <a href="#" class="news-card-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img src="images/IMG_7210_20251219_205215_3600.jpg" alt="Wedding planning tips" class="news-card-image">
+                        <div class="news-card-content">
+                            <div class="news-card-date">December 2025</div>
+                            <h3 class="news-card-title">How to Choose the Perfect Photo Booth for Your Wedding</h3>
+                            <p class="news-card-excerpt">
+                                Planning a wedding in Toronto or the GTA? Get expert tips on selecting the right photo booth package, timing, and features to make your special day unforgettable.
+                            </p>
+                            <a href="#" class="news-card-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img src="images/IMG_7214_20251219_205436_3600.jpg" alt="Corporate events" class="news-card-image">
+                        <div class="news-card-content">
+                            <div class="news-card-date">November 2025</div>
+                            <h3 class="news-card-title">Photo Booths for Corporate Events: A Complete Guide</h3>
+                            <p class="news-card-excerpt">
+                                Learn how photo booths can enhance your corporate events, from team building to product launches. Discover branding options and engagement strategies for business events.
+                            </p>
+                            <a href="#" class="news-card-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img src="images/IMG_7740_20251223_230712_3600.jpg" alt="Event planning" class="news-card-image">
+                        <div class="news-card-content">
+                            <div class="news-card-date">October 2025</div>
+                            <h3 class="news-card-title">Event Planning Tips: When to Book Your Photo Booth</h3>
+                            <p class="news-card-excerpt">
+                                Timing is everything when planning your event. Learn when to book your photo booth rental, what to consider, and how to ensure availability for your preferred date.
+                            </p>
+                            <a href="#" class="news-card-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img src="images/IMG_8097_20251231_235823_3600.jpg" alt="Photo booth features" class="news-card-image">
+                        <div class="news-card-content">
+                            <div class="news-card-date">September 2025</div>
+                            <h3 class="news-card-title">New Features: Digital Sharing and Online Galleries</h3>
+                            <p class="news-card-excerpt">
+                                We're excited to announce enhanced digital sharing capabilities and online gallery access. Learn about our new features that make it easier than ever for guests to access and share their photos.
+                            </p>
+                            <a href="#" class="news-card-link">Read More →</a>
+                        </div>
+                    </div>
+
+                    <div class="news-card">
+                        <img src="images/IMG_8530_20260110_201730_3600.jpg" alt="Service areas" class="news-card-image">
+                        <div class="news-card-content">
+                            <div class="news-card-date">August 2025</div>
+                            <h3 class="news-card-title">Expanding Our Service Area Across the GTA</h3>
+                            <p class="news-card-excerpt">
+                                GTA Photo Booths is now serving even more communities across the Greater Toronto Area. Find out about our expanded coverage and how we're making photo booth rentals more accessible.
+                            </p>
+                            <a href="#" class="news-card-link">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--light); border-radius: 10px;">
+                    <h3 style="margin-bottom: 1rem; color: var(--text-dark);">Stay Updated</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                        Want to stay informed about photo booth trends, event planning tips, and special offers? Follow us for the latest updates and news from GTA Photo Booths.
+                    </p>
+                    <a href="/contact.html" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Book Your Photo Booth?</h2>
+                <p>Get an instant quote for your event today</p>
+                <div class="cta-buttons">
+                    <a href="/quote.html" class="btn btn-large">Get a Quote</a>
+                    <a href="tel:+16473785332" class="btn btn-outline btn-large">Call: 647-378-5332</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GTA Photo Booths</h3>
+                    <p>Premium Photo Booth Rentals in Toronto and GTA</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                        <li><a href="/quote.html">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>
+                        <a href="tel:+16473785332">647-378-5332</a><br>
+                        <a href="mailto:hello@gtaphotobooths.ca">hello@gtaphotobooths.ca</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>
+                        <a href="/toronto.html">Toronto</a> • 
+                        <a href="/mississauga.html">Mississauga</a> • 
+                        <a href="/vaughan.html">Vaughan</a> • 
+                        <a href="/oakville.html">Oakville</a> • 
+                        <a href="/richmond-hill.html">Richmond Hill</a> • GTA
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="copyright-year">2026</span> GTA Photo Booths. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
