@@ -116,7 +116,7 @@ export default async function handler(req, res) {
             background-color: #f8f9fa;
             padding: 1rem;
             border-radius: 5px;
-            border-left: 3px solid #5ab5d5;
+            border-left: 3px solid #d58a6d;
             margin-top: 1rem;
           }
         </style>
@@ -138,11 +138,11 @@ export default async function handler(req, res) {
             </div>
             <div class="field-group">
               <span class="field-label">Email</span>
-              <p class="field-value"><a href="mailto:${email}" style="color: #5ab5d5; text-decoration: none;">${email}</a></p>
+              <p class="field-value"><a href="mailto:${email}" style="color: #d58a6d; text-decoration: none;">${email}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Phone</span>
-              <p class="field-value"><a href="tel:${phone.replace(/\D/g, '')}" style="color: #5ab5d5; text-decoration: none;">${phone}</a></p>
+              <p class="field-value"><a href="tel:${phone.replace(/\D/g, '')}" style="color: #d58a6d; text-decoration: none;">${phone}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Event Date</span>

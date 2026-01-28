@@ -181,11 +181,11 @@ export default async function handler(req, res) {
             </div>
             <div class="field-group">
               <span class="field-label">Email</span>
-              <p class="field-value"><a href="mailto:${contact.email}" style="color: #5ab5d5; text-decoration: none;">${contact.email}</a></p>
+              <p class="field-value"><a href="mailto:${contact.email}" style="color: #d58a6d; text-decoration: none;">${contact.email}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Phone</span>
-              <p class="field-value"><a href="tel:${contact.phone.replace(/\D/g, '')}" style="color: #5ab5d5; text-decoration: none;">${contact.phone}</a></p>
+              <p class="field-value"><a href="tel:${contact.phone.replace(/\D/g, '')}" style="color: #d58a6d; text-decoration: none;">${contact.phone}</a></p>
             </div>
             <div class="field-group">
               <span class="field-label">Event Date</span>
@@ -307,7 +307,7 @@ export default async function handler(req, res) {
           }
           .cta-button {
             display: inline-block;
-            background-color: #5ab5d5;
+            background-color: #d58a6d;
             color: #ffffff;
             padding: 1rem 2rem;
             text-decoration: none;
@@ -378,8 +378,8 @@ export default async function handler(req, res) {
 
           <div class="email-footer">
             <p><strong>GTA Photo Booths</strong></p>
-            <p>Phone: <a href="tel:+16473785332" style="color: #5ab5d5; text-decoration: none;">647-378-5332</a></p>
-            <p>Email: <a href="mailto:hello@gtaphotobooths.ca" style="color: #5ab5d5; text-decoration: none;">hello@gtaphotobooths.ca</a></p>
+            <p>Phone: <a href="tel:+16473785332" style="color: #d58a6d; text-decoration: none;">647-378-5332</a></p>
+            <p>Email: <a href="mailto:hello@gtaphotobooths.ca" style="color: #d58a6d; text-decoration: none;">hello@gtaphotobooths.ca</a></p>
           </div>
         </div>
       </body>

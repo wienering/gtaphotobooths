@@ -8,7 +8,7 @@
 :root {
     --primary-color: #0d8d9a;
     --primary-dark: #0a6d7a;
-    --secondary-color: #5ab5d5;
+    --secondary-color: #d58a6d;
     --dark: #2c3e50;
     --light: #ecf0f1;
     --white: #ffffff;
@@ -209,8 +209,8 @@ body {
 }
 
 .btn:hover {
-    background: #4a9bb8;
-    border-color: #4a9bb8;
+    background: #c47a5d;
+    border-color: #c47a5d;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
